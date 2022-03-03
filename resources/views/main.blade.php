@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +11,13 @@
 	<link href="{{asset('css/templatemo-style.css')}}" rel="stylesheet" />
 </head>
 <!--
-
+	
 Simple House
 
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body style="background-color: #fff"> 
     @include('navbar')
     @yield('content')
     @include('footer')
