@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\aboutController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/',[homeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('about');
-})->name('about');
+Route::get('/about',[aboutController::class, 'about'])->name('about');
 
-Route::get('/', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact',[contactController::class, 'contact'])->name('contact');
